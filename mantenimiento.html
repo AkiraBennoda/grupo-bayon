@@ -17,11 +17,11 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
    
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body id="seccSitio">
+<body id="seccSitio" class="nav-logo">
   <section id="seccHeader">
     <nav class="navbar navbar-expand-lg justify-content-around d-grid">
       <div class="container-fluid">
@@ -44,7 +44,7 @@
               <a class="nav-link" href="portafolio.html">Portafolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portafolio.html">Clientes</a>
+              <a class="nav-link" href="socios-comerciales.html">Socios Comerciales</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,18 +67,18 @@
     </nav>
   </section>
 
-  <section id="seccBannerSecciones">
+  <section id="seccBannerSecciones" class="mantenimiento-bg"  data-aos="fade-left"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1>Servicios</h1>
+          <h1 class="text-light">Servicios</h1>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section id="seccServicios" class="section">
+  <section id="seccServicios" class="section"  data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center my-5 pt-5">
@@ -124,7 +124,7 @@
                 <img src="img/limpieza.png" alt="">
               </div>
               <div class="col-md-9">
-                <h4>Limpieza</h4>
+                <h4>Limpieza y conservación</h4>
                 <p>Ofrecemos servicios profesionales de limpieza para oficinas, 
                   edificios y espacios comerciales, garantizando ambientes limpios, 
                   seguros y saludables con atención a cada detalle.</p>
@@ -138,7 +138,7 @@
                 <img src="img/venta.png" alt="">
               </div>
               <div class="col-md-9">
-                <h4>Venta de bienes</h4>
+                <h4>Abastecimiento de bienes</h4>
                 <p>Proveemos una amplia gama de productos, desde equipos tecnológicos 
                   hasta insumos de oficina, siempre priorizando la calidad y
                    las necesidades de nuestros clientes.</p>
@@ -151,44 +151,65 @@
     </div>
   </section>
 
-  <section id="seccDescripcion" class="section">
+  <section id="seccDescripcion" class="section"  data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center mb-5">
           <h1>Detalle de servicios</h1>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="img/servicios/s-3-1.jpg" class="card-img-top" alt="...">
+          <div class="card w-auto">
             <div class="card-body">
-              <p class="card-text">Instalación y configuración de A/C</p>
+              <h5 class="card-title">Pinturas</h5>
+              <img src="img/servicios/mto-1.png" class="w-100 rounded-1 my-3" alt="">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Comex</li>
+                <li class="list-group-item">Berel</li>
+                <li class="list-group-item">Condulac</li>
+                <li class="list-group-item">Infra</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="img/servicios/s-3-2.jpg" class="card-img-top" alt="...">
+          <div class="card w-auto">
             <div class="card-body">
-              <p class="card-text">Mantenimiento general</p>
+              <h5 class="card-title">Iluminarias</h5>
+              <img src="img/servicios/ser-1.jpg" class="w-100 rounded-1 my-3" alt="">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Magg</li>
+                <li class="list-group-item">Leviton</li>
+                <li class="list-group-item">Tecnolite</li>
+                <li class="list-group-item">Ipsa</li>
+                <li class="list-group-item">IUSA</li>
+                <li class="list-group-item">Btcino</li>
+                <li class="list-group-item">Estevez</li>
+                <li class="list-group-item">Ledvance</li>
+                <li class="list-group-item">Philco</li>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card">
-            <img src="img/servicios/s-3-3.jpg" class="card-img-top" alt="...">
+          <div class="card w-auto">
             <div class="card-body">
-              <p class="card-text">Servicio profesional de limpieza</p>
+              <h5 class="card-title">Aceros y estructuras</h5>
+              <img src="img/servicios/mto-2.png" class="w-100 rounded-1 my-3" alt="">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Perfiles</li>
+                <li class="list-group-item">Estructuras</li>
+                <li class="list-group-item">Concreto</li>
+                <li class="list-group-item">Reforzado</li>
+              </ul>
             </div>
           </div>
         </div>
-
-
+  
       </div>
     </div>
-
   </section>
 
-  <section id="seccFooter" class="section">
+  <section id="seccFooter" class="section"  data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <footer>
       <div class="container">
 
@@ -264,7 +285,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="copyright-text">
-                    <p>Grupo bayón © 2024 - Diseñado por Kaizen Coding</p>
+                  <p> © 2024 Grupo Bayón - Todos los derechos reservos <br> Diseñado por Kaizen Coding </p>
                 </div>
             </div>
         </div>
@@ -278,6 +299,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/vue.js"></script>
   <script src="js/functions.js"></script>
 </body>
 

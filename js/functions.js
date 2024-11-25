@@ -1,16 +1,18 @@
+AOS.init();
+
+
 $(document).ready(function () {
+
+
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop > 49) {
       $('.navbar').addClass('header-fixed');
-      $('.navbar').removeClass('justify-content-lg-end');
-      $('.navbar').addClass('justify-content-lg-center');
-      $(".logo-img").attr("src", "img/logo.png");
+      $(".logo-img").attr("src", "img/logo-blanco.png");
  
     } else {
       $('.navbar').removeClass('header-fixed');
-      $('.navbar').addClass('justify-content-lg-end');
-      $('.navbar').removeClass('justify-content-lg-center');
+      $(".logo-img").attr("src", "img/logo.png");
  
     }
   });
@@ -37,19 +39,25 @@ checkScreenWidth();
 
 
   /*Formulario*/
+ 
   function sendInfoWhats() {
+   
     var correo = $("#correoCliente").val();
     var comentarios = $("#comentariosCliente").val();
 
-    var telefono = '525511473986';
+    var telefono = '525582800356';
     var url = 'https://wa.me/' + telefono + '?text='
       + encodeURIComponent('Hola, me gustaría mas información a cerca de tus servicios, mi informción de contacto es: ' + correo + '\nMensaje: ' + comentarios);
     window.open(url);
   }
 
+  $(".btn-send-info" ).on( "click", function() {
+    sendInfoWhats();
+  } );
+
   /*Carousel Clientes*/
   // Carousel 
-  var jsonCarrusel = {
+  var jsonCarrusel1 = {
     "clientes": [{
       "src": "img/clientes/sedena.png"
     },
@@ -70,16 +78,45 @@ checkScreenWidth();
     },
     {
       "src": "img/clientes/queretaro.png"
+    },
+    {
+      "src": "img/clientes/cultura.png"
     }
     ]
   };
 
-  var clientes = jsonCarrusel.clientes;
+  var jsonCarrusel2 = {
+    "clientes": [
+    {
+      "src": "img/clientes/fgr.png"
+    },
+    {
+      "src": "img/clientes/mora.png"
+    },
+    {
+      "src": "img/clientes/colliers.png"
+    },
+    {
+      "src": "img/clientes/tja.png"
+    },
+    {
+      "src": "img/clientes/cide.png"
+    },
+    {
+      "src": "img/clientes/tlalnepantla.png"
+    },
+    {
+      "src": "img/clientes/casa.png"
+    }
+    ]
+  };
+
+  var clientes1 = jsonCarrusel1.clientes;
 
   new Vue({
-    el: '#carouselGrupo',
+    el: '#carouselGrupo1',
     data: {
-      slides: clientes,
+      slides: clientes1,
     },
 
     components: {
@@ -89,6 +126,20 @@ checkScreenWidth();
 
   });
 
+  var clientes2 = jsonCarrusel2.clientes;
+
+  new Vue({
+    el: '#carouselGrupo2',
+    data: {
+      slides: clientes2,
+    },
+
+    components: {
+      'carousel-3d': Carousel3d.Carousel3d,
+      'slide': Carousel3d.Slide
+    },
+
+  });
 
 
 
