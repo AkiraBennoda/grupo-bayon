@@ -9,6 +9,7 @@
     --color-default: #3a3a3a;
     --color-primary: #0050b6;
     --color-secondary: #0065ad;
+    --color-back: #0e2639;
 }
 
 body{
@@ -16,20 +17,30 @@ body{
     color: var(--color-default);
     background: var(--theme-color);
     transition: 0.5s background ease;
-    font-weight: 400;
+    font-size: 15px;
   }  
 
-h2{
+  body,
+  html{
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+h1{
     font-size: 32px;
     color: var(--color-primary);
-    font-weight: 400;
+    font-weight: 600;
 }
 
+.navbar-collapse
+{
+    background: transparent;
+}
 
 
 .section{
         background: var(--light-color);
-        padding: 85px 0;
+        padding: 85px 0px 40px;
         overflow: hidden
 
 }
@@ -78,17 +89,18 @@ h2{
     top: 0;
     right: 0;
     left: 0;
-    height: 90px;
+    height: 112px;
     z-index: 3;
     width: 100%;
     transition: 0.7s all;
+    background: #00275587;
     a{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 0px 20px;
         font-family: var(--font-primary);
-        color: #FFF;
+        color: #fff ;
         white-space: nowrap;
         transition: 0.3s;
         font-weight: 400;
@@ -110,6 +122,18 @@ h2{
     transform-origin: bottom left;
   }
   
+.navbar .nav-item a:hover
+{
+    color: var(--light-color) !important;
+} 
+
+.navbar .nav-item a.active
+{
+    color: var(--light-color) !important;
+    background-color: var(--text-yellow);
+
+} 
+
 .navbar .nav-item a::before {
     content: " ";
     display: block;
@@ -121,6 +145,18 @@ h2{
     transition: transform .3s ease;
   }
 
+.navbar-toggler-icon{
+    background-image: url(../img/hamburger.png);
+    border: none;
+}
+
+.navbar-toggle,
+.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+    transition: none;
+}
+
 .navbar .nav-item  .dropdown-menu a{
    color: var(--color-primary) !important;
 }
@@ -130,17 +166,21 @@ h2{
   }
 .header-fixed 
 {
-    background-color: var(--light-color);
+    background-color: var(--color-back) !important;
     height: 116px !important;
     margin: 0px;
     padding: 0px;
-    box-shadow: 0px 0px 17px #e1dfdf;
-}
-.header-fixed a
-{
-    color: var(--color-primary) !important;
 }
 
+.header-fixed a
+{
+    color: var(--light-color) !important;
+}
+
+
+.nav-logo .nav-item a{
+    color: white !important;
+}
 
 
 
@@ -148,17 +188,36 @@ h2{
 {
     width: 100%;
     position: relative;
-    background: url(../img/banner-home.jpg) center center;
+    background: url(../img/bg-home-2.jpg) center center;
     background-attachment: fixed;
-    background-position-y: inherit;
-    background-size: auto;
     background-size: cover;
-    padding: 60px 0 0 0;
     height: 100vh;
-    min-height: 700px;
     display: flex;
     align-items: center;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    #seccBanner
+    {
+        background: url(../img/banner-home-resp.jpg) center center;
+        background-size: cover;
+        padding: 0;
+        height: 100vh;
+    
+    }
+
+    #seccBanner h1, 
+    #seccBanner  p{
+        color:var(--light-color);
+    }
+
+    #map{
+        height: 50vh !important;
+    }
+    
+
+ 
 }
 
 #seccBanner h3{
@@ -173,13 +232,15 @@ h2{
     padding: 40px 30px;
     text-align: center;
     border-radius: 5px;
-    background-color: #ffffff;
     -webkit-box-shadow: 0px 10px 57px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 10px 57px 0px rgba(0, 0, 0, 0.08);
     transition: all .4s ease;
     margin-bottom: 30px;
     border:none;
     width: 400px;
+}
+#seccNosotros .card{
+    background: #f5ae21;
 }
 
 .card-title{
@@ -206,20 +267,47 @@ h2{
     background-size: cover;
     padding: 60px 0 0 0;
     background-attachment: fixed;
-    height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 .ico-servicios img{
     width: 66px;
-    filter: drop-shadow(0px 0px 10px #85a4bf);
+    /*filter: drop-shadow(0px 0px 10px #85a4bf);*/
 }
 
 .img-engrane
 {
     width: 400px;
+    transition: all 0.5s;
+    cursor: pointer;
+    -webkit-animation: giro 10s linear infinite;
+            animation: giro 10s linear infinite;
 }
+
+
+
+@-webkit-keyframes giro {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  @keyframes giro {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  @-webkit-keyframes levitar {
+    to {
+      transform: translateY(-20%);
+    }
+  }
+  @keyframes levitar {
+    to {
+      transform: translateY(-20%);
+    }
+  }
 
 .descripcion
 {
@@ -271,10 +359,24 @@ h2{
 }
 
 
+
 /*Contactanos*/
 #seccContactanos
 {
     background-color: #f8f8f8;
+}
+
+#seccContactanos a
+{
+   color:var(--color-default);
+   text-decoration: none;
+}
+
+#seccContactanos .contact-info i
+{
+   color:var(--text-yellow);
+   padding-right: 10px;
+   padding-bottom: 15px;
 }
 
 /*Footer*/
@@ -319,29 +421,61 @@ h2{
 
 #seccFooter p
 {
-    font-size: 14px;
+    font-size: 13px;
+}
+
+#seccFooter .footer-widget a
+{
+    color:var(--light-color);
+    text-decoration: none;
+}
+
+#seccFooter .footer-widget i
+{
+   padding-right: 10px;
 }
 
 /*****************************************************************/
 /*Nosotros*/
 #seccSitio .navbar a{
-    color:var(--color-primary);
+    color:#fff;
 }
+
 #seccBannerSecciones
 {
-    background: url(../img/banner-secc.jpg) center center;
+    background: url(../img/banner-home-responsive.jpg) center center;
     width: 100%;
     position: relative;
     background-attachment: fixed;
     background-position-y: inherit;
-    background-size: auto;
     background-size: cover;
     padding: 60px 0 0 0;
     display: flex;
-    height: 30vh;
+    height: 50vh;
     align-items: center;
     overflow: hidden;
 
+}
+
+.soluciones-bg{
+    background: url(../img/soluciones-bg.png) !important;
+    background-position-y: 0%;
+    background-size: cover !important;
+    background-position-y: -244px !important;
+}
+
+.abastecimientos-bg{
+    background: url(../img/abastecimientos-bg.png) !important;
+    background-position-y: 0%;
+    background-size: cover !important;
+    background-position-y: -244px !important;
+}
+
+.mantenimiento-bg{
+    background: url(../img/mantenimiento-bg.png) !important;
+    background-position-y: 0%;
+    background-size: cover !important;
+    background-position-y: -244px !important;
 }
 
 /*****************************************************************/
@@ -356,7 +490,6 @@ h2{
     background-size: cover;
     padding: 0px 0 0 0;
     background-attachment: fixed;
-    height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -364,4 +497,39 @@ h2{
 #seccSitio .descripcion
 {
     color: var(--color-defaulty) !important;
+}
+
+
+
+/*Clientes*/
+
+.carousel-vue .carousel-3d-slide
+{
+    width: auto !important;
+    height: auto !important;
+    background: transparent;
+ 
+}
+
+.carousel-vue .carousel-3d-slide img:hover
+{
+    filter: grayscale(1);
+    cursor: pointer;
+}
+
+/**********************************************/
+
+#seccVisionMision{
+    background: url(../img/soluciones-bg.png) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--light-color);
+    
+}
+
+
+#seccSociosComerciales .card-header{
+    background: var(--color-secondary);
+    color: var(--bs-body-bg);
+    font-weight: bold;
 }

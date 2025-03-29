@@ -17,7 +17,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
    
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -43,6 +43,9 @@
             <li class="nav-item">
               <a class="nav-link" href="portafolio.html">Portafolio</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="socios-comerciales.html">Socios Comerciales</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="servicios.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Servicios
@@ -67,23 +70,25 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h2>Nosotros</h2>
+          <h1 class="text-light">Filosof&iacute;a</h1>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section id="seccNosotros" class="section">
+  <section id="seccNosotros" class="section" data-aos="fade-right"  data-aos-offset="500" data-aos-easing="ease-in-sine">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <p class="">En <strong>Grupo Bayón</strong>nos enorgullece ser una empresa integral 
-            dedicada a ofrecer soluciones innovadoras en diversas áreas, desde tecnología y telecomunicaciones 
-            hasta infraestructura y servicios. Con más de [número] años de experiencia, nos hemos consolidado 
-            como un aliado estratégico para empresas y gobiernos, brindando productos y servicios de alta calidad 
-            que aseguran el funcionamiento eficiente y sostenible de sus operaciones.</p>
-    
+          <h1>Nosotros</h1>
+          <p class="mt-5"><strong>Grupo Bayón</strong> cuenta con más de 10 años de experiencia formada por nuestros
+            socios y colaboradores, desde nuestros inicios nos caracterizamos por brindar servicios innovadores,
+            bienes de calidad y vanguardia, agregando valor en cada proyecto.
+          </p>
+          <p>Nuestro compromiso con la excelencia se basa en la implementación del marco SCRUM, que nos permite
+            trabajar de manera eficiente y colaborativa en cada fase de nuestros proyectos, aplicando principalmente :
+          </p>
         </div>
       </div>
       <div class="row">
@@ -115,7 +120,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mt-5 d-flex justify-content-lg-end justify-content-sm-center">
+        <div class="col-md-6 mt-5 d-flex justify-content-lg-end justify-content-center">
           <div class="card">
             <div class="card-body">
               <img class="card-img" src="img/iconos/calidad.png" alt="">
@@ -124,7 +129,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mt-5 d-flex justify-content-lg-start justify-content-sm-center">
+        <div class="col-md-6 mt-5 d-flex justify-content-lg-start justify-content-center">
           <div class="card">
             <div class="card-body">
               <img class="card-img" src="img/iconos/pasion.png" alt="">
@@ -138,13 +143,34 @@
     </div>
   </section>
 
-  <section id="seccTeam" class="section">
+  <section id="seccVisionMision" class="section" data-aos="fade-right"  data-aos-offset="500" data-aos-easing="ease-in-sine">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center py-5">
+          <h1 class="text-light">Visión</h1>
+          <p class="mt-5">
+            En Grupo Bayon , aspiramos a ser líderes globales en la provisión de soluciones integrales e innovadoras en los diferentes sectores del mercado. 
+          </p>
+        </div>
+        <div class="col-md-6 text-center py-5">
+          <h1 class="text-light">Misión</h1>
+          <p class="mt-5">
+            En Grupo Bayon, estamos comprometidos en proporcionar soluciones integrales e innovadoras, que impulsen el crecimiento y la eficiencia del sector público y privado. A través de un enfoque basado en el profesionalismo, la confianza y nuestra vasta experiencia en el sector, nos comprometemos a diagnosticar, evaluar y ofrecer las mejores opciones adaptadas a las necesidades específicas de cada cliente.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="seccTeam" class="section"  data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h2>Nuestro equipo</h2>
+          <h1 class="my-5">Nuestro equipo</h1>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <img src="img/clientes-union.png" alt="">
       </div>
         <div class="col-md-6 text-center mt-5">
@@ -160,7 +186,7 @@
     </div>
   </section>
 
-  <section id="seccFooter" class="section">
+  <section id="seccFooter" class="section"  data-aos="fade-right"  data-aos-offset="300"  data-aos-easing="ease-in-sine">
     <footer>
       <div class="container">
 
@@ -173,13 +199,13 @@
                   <p class="mt-3 pe-lg-2"><strong>Grupo Bayón</strong> te ofrece soluciones tecnológicas de vanguardia para impulsar tu negocio. 
                     Confía en nuestra experiencia y excelencia para lograr resultados eficientes</p>
 
-                    <div class="footer-social-icon">
+                    <!-- <div class="footer-social-icon">
                         <p>Síguenos</p>
                         <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
                         <a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -201,13 +227,11 @@
                         <h3>Información</h3>
                     </div>
                       <ul class="list">
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Portafolio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
                         <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Clientes</a></li>
-                        <li><a href="#">Contáctanos</a></li>
-                        <li><a href="#">Términos y condiciones</a></li>
-                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
                       </ul>
                   </div>
               </div>
@@ -216,26 +240,29 @@
                     <div class="footer-widget-heading">
                         <h3>Contáctanos</h3>
                     </div>
-                      <div class="footer-text">
-                          <p>
-                            <i class="fa-solid fa-location-dot"></i>
-                             Calle Hamburgo No. 182, Piso 4-400, Colonia Juárez, Cuauhtemoc, Ciudad de México 
-                          </p>
-                          <p>
-                            <i class="fa-solid fa-phone"></i>
-                              +52 55 2312 2113
-                          </p>
-                          <p>
-                            <i class="fa-solid fa-envelope"></i>
-                             contacto@grupobayon.com.mx
-                          </p>
-                      </div>
+                    <div class="footer-text">
+                      <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="https://maps.app.goo.gl/STAFuieFTsUnDa2T9" target="_blank">
+                          Calle Hamburgo No. 182, Piso 4-400, Colonia Juárez, Cuauhtemoc, Ciudad de México
+                        </a>
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-phone"></i>
+                             <a href="tel:+525588820088">+52 55 8882 0088</a>
+                      </p>
+                      <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:administracion@grupobayon.com.mx">administracion@grupobayon.com.mx</a>
+                         
+                      </p>
+                  </div>
                 </div>
          </div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="copyright-text">
-                    <p>Grupo bayón © 2024 - Diseñado por Kaizen Coding</p>
+                  <p> © 2024 Grupo Bayón - Todos los derechos reservos <br> Diseñado por Kaizen Coding </p>
                 </div>
             </div>
         </div>
@@ -249,6 +276,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/vue.js"></script>
   <script src="js/functions.js"></script>
 </body>
 
